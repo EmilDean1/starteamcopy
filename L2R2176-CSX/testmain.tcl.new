@@ -1,0 +1,167 @@
+
+btb test L2R2176-CSX "Configuring new application links, deleting existing application links, enabling or disabling each application link, or changing all application link configuration parameters shall not require a server shutdown and restart"
+
+btb requirement L2R2176
+
+btb comment "Waiting for 2 seconds before starting the test.." 
+after 2000 {btb comment "Wait is over" ; set vwait_startup 0} 
+vwait vwait_startup 
+
+after 40000 {btb abort "timeout"}
+
+
+btb begin TS-1 "--------------"
+
+btb comment "1. Create"
+btb ssh bos.1 classd create UTCS.5
+
+set result [btb_select bos.1 CLDENABLED FROM CLASSD WHERE CLDID = [btb sqlstring "UTCS.5"]]
+set ENABLE [lindex $result 1]
+btb comment "2. Test $ENABLE"
+
+if { $ENABLE == "N" } {
+    btb comment "2.1 Test PASS"
+} else {
+    btb failed "2.1 FAILED.  There should be a record in RTD"
+}
+
+btb end TS-1
+
+
+btb begin TS-2 "--------------"
+
+btb ssh bos.1 classd configure UTCS.5 -side=S -dir=B -localport=7805 -remoteport=7805 -localaddr=ip-of-BOS -addr=ip-of-BTB -dest=COD_FM1_CAD01 -protocol=XML
+
+after 100 {set vwait_100 0} 
+vwait vwait_100
+
+set result [btb_select bos.1 CLDSIDE,CLDDIR,CLDADDR(0),CLDLOCALPORT,CLDREMOTEPORT,CLDDEST,CLDPROTOCOL FROM CLASSD WHERE CLDID = [btb sqlstring "UTCS.5"]]
+
+#Verify CLDSIDE="S" CLDDIR="B" CLDLOCALPORT="7805" CLDADDR="0" CLDREMOTEPORT="7805" CLDDEST="COD_FM1_CAD01" CLDPROTOCOL="XML"
+set CLDSIDE [lindex $result 7]
+set CLDDIR  [lindex $result 8]
+set CLDADDR [lindex $result 9]
+set CLDLOCALPORT  [lindex $result 10]
+set CLDREMOTEPORT [lindex $result 11]
+set CLDDEST [lindex $result 12]
+set CLDPROTOCOL   [lindex $result 13]
+btb comment "2. The result is $CLDSIDE $CLDDIR $CLDADDR $CLDLOCALPORT $CLDREMOTEPORT $CLDDEST $CLDPROTOCOL"
+
+if { $CLDSIDE == "S" } {
+    btb comment "4.1 Test PASS"
+} else {
+    btb failed "4.1 FAILED.  Should be S"
+}
+
+if { $CLDDIR == "B" } {
+    btb comment "4.2 Test PASS"
+} else {
+    btb failed "4.2 FAILED.  Should be B"
+}
+
+if { $CLDLOCALPORT == "7805" } {
+    btb comment "4.3 Test PASS"
+} else {
+    btb failed "4.3 FAILED.  Should be 7805"
+}
+
+if { $CLDREMOTEPORT == "7805" } {
+    btb comment "4.4 Test PASS"
+} else {
+    btb failed "4.4 FAILED.  Should be 7805"
+}
+
+if { $CLDDEST == "COD_FM1_CAD01" } {
+    btb comment "4.5 Test PASS"
+} else {
+    btb failed "4.5 FAILED.  Should be COD_FM1_CAD01"
+}
+
+if { $CLDPROTOCOL == "XML" } {
+    btb comment "4.6 Test PASS"
+} else {
+    btb failed "4.6 FAILED.  Should be XML"
+}
+
+btb end TS-2
+
+btb begin TS-3 "--------------"
+
+btb ssh bos.1 classd enable UTCS.5
+
+after 100 {set vwait_100 0} 
+vwait vwait_100
+
+set result [btb_select bos.1 CLDENABLED,CLDSTATUS FROM CLASSD WHERE CLDID = [btb sqlstring "UTCS.5"]]
+btb comment "6. The result is $result"
+
+set ENABLE [lindex $result 2]
+btb comment "6.1 Test $ENABLE"
+
+if { $ENABLE == "Y" } {
+    btb comment "6.1 Test PASS"
+} else {
+    btb failed "6.1 FAILED.  Should be Y"
+}
+
+set STATUS [lindex $result 3]
+btb comment "6.2 Test $STATUS"
+
+if { $ENABLE == "U" } {
+    btb comment "6.2 Test PASS"
+} else {
+    btb failed "6.2 FAILED.  Should be U"
+}
+
+btb end TS-3
+
+btb begin TS-4 "--------------"
+
+btb ssh bos.1 classdping -c=3 UTCS.5
+
+after 100 {set vwait_100 0} 
+vwait vwait_100
+
+#Check pcap for ping
+
+btb end TS-4
+
+btb begin TS-5 "--------------"
+
+btb ssh bos.1 classd disable UTCS.5
+
+after 100 {set vwait_100 0}
+vwait vwait_100
+
+set result [btb_select bos.1 CLDENABLED FROM CLASSD WHERE CLDID = [btb sqlstring "UTCS.5"]]
+btb comment "9. The result is $result"
+
+set ENABLE [lindex $result 1]
+btb comment "9.1 Test $ENABLE"
+
+if { $ENABLE == "N" } {
+    btb comment "9.1 Test PASS"
+} else {
+    btb failed "9.1 FAILED.  Should be N"
+}
+
+btb end TS-5
+
+btb begin TS-6 "--------------"
+
+btb ssh bos.1 classd delete UTCS.5
+
+after 100 {set vwait_100 0}
+vwait vwait_100
+
+set result [btb_select bos.1 CLDENABLED FROM CLASSD WHERE CLDID = [btb sqlstring "UTCS.5"]]
+btb comment "11. The result is $result"
+
+if { $result == "" } {
+    btb comment "11.1 Test PASS"
+} else {
+    btb failed "11.1 FAILED.  Should be empty"
+}
+
+btb end TS-6
+

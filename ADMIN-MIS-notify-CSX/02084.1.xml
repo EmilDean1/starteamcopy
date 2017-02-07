@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<L2B_02084>
+<EMP>
+    <ProtocolVersion>1</ProtocolVersion>
+    <MessageId>02084</MessageId>
+    <MessageVersion>4</MessageVersion>
+    <Flags>0</Flags>
+    <MessageNumber>1</MessageNumber>
+    <MessageTime>0</MessageTime>
+    <TimeToLive>0</TimeToLive>
+    <RoutingQoS>0</RoutingQoS>
+    <Source>arin.l.arin.9001:itc</Source>
+    <Destination>csx.b:CSXBOS1</Destination>
+    <DataIntegrity></DataIntegrity>
+</EMP>
+<SCAC>CSXT</SCAC>
+<TrainId>Train1234567890123456789</TrainId>
+<StartBrakeTime>20110419132600</StartBrakeTime>
+<StartHEMilepost>2654710</StartHEMilepost>
+<StartHEMilepostPrefix>SE</StartHEMilepostPrefix>
+<StartHEMilepostSuffix></StartHEMilepostSuffix>
+<StartHETrackName>MAIN</StartHETrackName>
+<StartHESCAC>CSXT</StartHESCAC>
+<StartHESubdivId>468</StartHESubdivId>
+<StartREMilepost>2660000</StartREMilepost>
+<StartREMilepostPrefix>SE</StartREMilepostPrefix>
+<StartREMilepostSuffix></StartREMilepostSuffix>
+<StartRETrackName>MAIN</StartRETrackName>
+<StartRESCAC>CSXT</StartRESCAC>
+<StartRESubdivId>468</StartRESubdivId>
+<StartBrakingPositionUncertainty>1</StartBrakingPositionUncertainty>
+<StartDirectionOfTravel>1</StartDirectionOfTravel>
+<StartTrainSpeed>30.0</StartTrainSpeed>
+<StartBrakingHEPosition>
+    <ECEF_X>1111</ECEF_X>
+    <ECEF_Y>2222</ECEF_Y>
+    <ECEF_Z>-3333</ECEF_Z>
+</StartBrakingHEPosition>
+<StopHEMilepost>2660000</StopHEMilepost>
+<StopHEMilepostPrefix>SE</StopHEMilepostPrefix>
+<StopHEMilepostSuffix></StopHEMilepostSuffix>
+<StopHETrackName>MAIN</StopHETrackName>
+<StopHESCAC>CSXT</StopHESCAC>
+<StopHESubdivId>468</StopHESubdivId>
+<StopREMilepost>2660000</StopREMilepost>
+<StopREMilepostPrefix>SE</StopREMilepostPrefix>
+<StopREMilepostSuffix></StopREMilepostSuffix>
+<StopRETrackName>MAIN</StopRETrackName>
+<StopRESCAC>CSXT</StopRESCAC>
+<StopRESubdivId>468</StopRESubdivId>
+<StopBrakingPositionUncertainty>1</StopBrakingPositionUncertainty>
+<StopBrakingHEPosition>
+    <ECEF_X>1111</ECEF_X>
+    <ECEF_Y>2222</ECEF_Y>
+    <ECEF_Z>-3333</ECEF_Z>
+</StopBrakingHEPosition>
+<ApplicationType>2</ApplicationType>
+</L2B_02084>

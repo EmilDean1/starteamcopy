@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MBCDKPAB02>
+   <Content>   
+      <SeqNum></SeqNum>
+      <MsgType>MBCDKPAB02</MsgType>
+      <SubDivID>AB</SubDivID>
+      <Time>2010-08-17T09:30:52</Time>
+      <MsgSrc>CD</MsgSrc>
+   </Content>   
+   <CRC>
+      <CRCValue>1e0825a3</CRCValue>
+   </CRC>
+</MBCDKPAB02>

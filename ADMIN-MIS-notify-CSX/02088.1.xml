@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<L2B_02088>
+<EMP>
+    <ProtocolVersion>1</ProtocolVersion>
+    <MessageId>02088</MessageId>
+    <MessageVersion>5</MessageVersion>
+    <Flags>17</Flags>
+    <MessageNumber>1</MessageNumber>
+    <MessageTime>0</MessageTime>
+    <TimeToLive>0</TimeToLive>
+    <RoutingQoS>0</RoutingQoS>
+    <Source>arin.l.arin.9001:itc</Source>
+    <Destination>bo.csxt:BOS1</Destination>
+    <DataIntegrity></DataIntegrity>
+</EMP>
+<SCAC>CSXT</SCAC>
+<ICDVersion>3.0</ICDVersion>
+<Reason>2</Reason>
+<VendorCode>WRE </VendorCode>
+<SystemCode>PTC </SystemCode>
+<NumberOfComponents>1</NumberOfComponents>
+<ComponentArray>
+    <Component>1</Component>
+    <NumberOfConfigItems>1</NumberOfConfigItems>
+    <ConfigItemArray>
+        <ItemCode>1</ItemCode>
+        <ItemText>Item Text</ItemText>
+    </ConfigItemArray>
+</ComponentArray>
+</L2B_02088>

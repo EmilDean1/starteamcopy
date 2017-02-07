@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<L2B_02083>
+<EMP>
+    <ProtocolVersion>1</ProtocolVersion>
+    <MessageId>02083</MessageId>
+    <MessageVersion>5</MessageVersion>
+    <Flags>0</Flags>
+    <MessageNumber>1</MessageNumber>
+    <MessageTime>0</MessageTime>
+    <TimeToLive>0</TimeToLive>
+    <RoutingQoS>0</RoutingQoS>
+    <Source>arin.l.arin.9001:itc</Source>
+    <Destination>csx.b:CSXBOS1</Destination>
+    <DataIntegrity></DataIntegrity>
+</EMP>
+<SCAC>CSXT</SCAC>
+<WarningEnforcementType>0</WarningEnforcementType>
+<TrainId>Train1234567890123456789</TrainId>
+<SoftwareVersion>1.2.3</SoftwareVersion>
+<TargetType>1</TargetType>
+<TargetDescription>Authority Violation</TargetDescription>
+<TargetStartMilepost>1850000</TargetStartMilepost>
+<TargetStartMilepostPrefix>S</TargetStartMilepostPrefix>
+<TargetStartMilepostSuffix></TargetStartMilepostSuffix>
+<TargetStartTrackName>MAIN</TargetStartTrackName>
+<TargetStartSCAC>CSXT</TargetStartSCAC>
+<TargetStartSubdivId>201</TargetStartSubdivId>
+<TargetEndMilepost>1852600</TargetEndMilepost>
+<TargetEndMilepostPrefix>S</TargetEndMilepostPrefix>
+<TargetEndMilepostSuffix></TargetEndMilepostSuffix>
+<TargetEndTrackName>MAIN</TargetEndTrackName>
+<TargetEndSCAC>CSXT</TargetEndSCAC>
+<TargetEndSubdivId>201</TargetEndSubdivId>
+<TargetSpeed>85</TargetSpeed>
+<WarningTime>20110419111800</WarningTime>
+<WarningStartMilepost>1850000</WarningStartMilepost>
+<WarningStartMilepostPrefix>S</WarningStartMilepostPrefix>
+<WarningStartMilepostSuffix></WarningStartMilepostSuffix>
+<WarningStartTrackName>MAIN</WarningStartTrackName>
+<WarningStartSCAC>CSXT</WarningStartSCAC>
+<WarningStartSubdivId>201</WarningStartSubdivId>
+<WarningPositionUncertainty>0</WarningPositionUncertainty>
+<WarningDistance>1</WarningDistance>
+<WarningDirectionOfTravel>1</WarningDirectionOfTravel>
+<WarningTrainSpeed>90</WarningTrainSpeed>
+<WarningHEPosition>
+    <ECEF_X>3333</ECEF_X>
+    <ECEF_Y>-3333</ECEF_Y>
+    <ECEF_Z>44444</ECEF_Z>
+</WarningHEPosition>
+<EnforcementTime></EnforcementTime>
+<EnforcementStartMilepost></EnforcementStartMilepost>
+<EnforcementStartMilepostPrefix></EnforcementStartMilepostPrefix>
+<EnforcementStartMilepostSuffix></EnforcementStartMilepostSuffix>
+<EnforcementStartTrackName></EnforcementStartTrackName>
+<EnforcementStartSCAC></EnforcementStartSCAC>
+<EnforcementStartSubdivId></EnforcementStartSubdivId>
+<EnforcementPositionUncertainty></EnforcementPositionUncertainty>
+<EnforcementBrakingDistance></EnforcementBrakingDistance>
+<EnforcementDirectionOfTravel></EnforcementDirectionOfTravel>
+<EnforcementTrainSpeed></EnforcementTrainSpeed>
+<EnforcementHEPosition>
+    <ECEF_X></ECEF_X>
+    <ECEF_Y></ECEF_Y>
+    <ECEF_Z></ECEF_Z>
+</EnforcementHEPosition>
+<EmergencyTime></EmergencyTime>
+<EmergencyStartMilepost></EmergencyStartMilepost>
+<EmergencyStartMilepostPrefix></EmergencyStartMilepostPrefix>
+<EmergencyStartMilepostSuffix></EmergencyStartMilepostSuffix>
+<EmergencytartTrackName></EmergencytartTrackName>
+<EmergencyStartSCAC></EmergencyStartSCAC>
+<EmergencyStartSubdivId></EmergencyStartSubdivId>
+<EmergencyPositionUncertainty></EmergencyPositionUncertainty>
+<EmergencyBrakingDistance></EmergencyBrakingDistance>
+<EmergencyDirectionOfTravel></EmergencyDirectionOfTravel>
+<EmergencyTrainSpeed></EmergencyTrainSpeed>
+<EmergencyHEPosition>
+    <ECEF_X></ECEF_X>
+    <ECEF_Y></ECEF_Y>
+    <ECEF_Z></ECEF_Z>
+</EmergencyHEPosition>
+<CurrentTime>20110419112000</CurrentTime>
+<CurrentMilepost>1852600</CurrentMilepost>
+<CurrentMilepostPrefix>S</CurrentMilepostPrefix>
+<CurrentMilepostSuffix></CurrentMilepostSuffix>
+<CurrentTrackName>MAIN</CurrentTrackName>
+<CurrentSCAC>CSXT</CurrentSCAC>
+<CurrentSubdivId>201</CurrentSubdivId>
+<CurrentPositionUncertainty>0</CurrentPositionUncertainty>
+<CurrentDirectionOfTravel>1</CurrentDirectionOfTravel>
+<CurrentTrainSpeed>93</CurrentTrainSpeed>
+<CurrentHEPosition>
+    <ECEF_X>3333</ECEF_X>
+    <ECEF_Y>4444</ECEF_Y>
+    <ECEF_Z>6666</ECEF_Z>
+</CurrentHEPosition>
+</L2B_02083>

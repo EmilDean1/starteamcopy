@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<L2B_02081>
+<EMP>
+    <ProtocolVersion>1</ProtocolVersion>
+    <MessageId>02081</MessageId>
+    <MessageVersion>4</MessageVersion>
+    <Flags>0</Flags>
+    <MessageNumber>2</MessageNumber>
+    <MessageTime>0</MessageTime>
+    <TimeToLive>0</TimeToLive>
+    <RoutingQoS>0</RoutingQoS>
+    <Source>arin.l.arin.9001:itc</Source>
+    <Destination>bo.csx:BOS1</Destination>
+    <DataIntegrity></DataIntegrity>
+</EMP>
+<SCAC>CSXT</SCAC>
+<ICDVersion>3.0</ICDVersion>
+<Reason>2</Reason>
+<VendorCode>GE  </VendorCode>
+<SystemCode>EM  </SystemCode>
+<NumberOfComponents>1</NumberOfComponents>
+<ComponentArray>
+    <Component>125</Component>
+    <NumberOfActiveFaults>1</NumberOfActiveFaults>
+    <ActiveFaultArray>
+        <FaultCode>1</FaultCode>
+        <FaultNameText>ABCDD</FaultNameText>
+        <TimeFaultDetected>20110414130200</TimeFaultDetected>
+    </ActiveFaultArray>
+</ComponentArray>
+<StateTime>20140310160500</StateTime>
+<LocomotiveStateSummary>1</LocomotiveStateSummary>
+<LocomotiveState>5</LocomotiveState>
+</L2B_02081>

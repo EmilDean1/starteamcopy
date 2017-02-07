@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<MBLOCFGA02>
+<Content>
+<MsgType>MBLOCFGA02</MsgType>
+<SubDivID>WM</SubDivID>
+<TrainShtKey>Train1234567890123456789</TrainShtKey>
+<LocoID>ARIN  9001</LocoID>
+<Time>2010-03-30T17:15:25</Time>
+<Version>7</Version>
+<MsgSrc>GB</MsgSrc>
+</Content>
+<CRC><CRCValue>MBLOCFGA02</CRCValue></CRC>
+</MBLOCFGA02>
